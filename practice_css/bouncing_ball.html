@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #ball {
+            background: radial-gradient(circle at 20% 20%, #c3574f, #ff070785);
+            width: 80px;
+            height: 80px;
+            border-radius: 99%;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            box-shadow: 10px 10px 15px 0 #fffd inset, 0 0 30px 0 red;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: go-red calc(var(--speed, 2s)) ease infinite alternate;
+            animation-fill-mode: forwards;
+        }
+
+        #ball.checked {
+            animation: go-green calc(var(--speed, 2s)) ease infinite alternate;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes go-red {
+            0% {
+                background: radial-gradient(circle at 20% 20%, #cddc39, #009900);
+                box-shadow: 10px 10px 15px 0 #fffd inset, 0 0 30px 0 lime;
+                transform: translateY(0);
+            }
+            50%, 100% {
+                background: radial-gradient(circle at 20% 20%, #c3574f, #ff070785);
+                box-shadow: 10px 10px 15px 0 #fffd inset, 0 0 30px 0 red;
+                transform: translateY(200px); /* Adjust this value to control the bounce height */
+            }
+        }
+
+        @keyframes go-green {
+            0% {
+                background: radial-gradient(circle at 20% 20%, #009900, #cddc39);
+                box-shadow: 10px 10px 15px 0 #fffd inset, 0 0 30px 0 green;
+                transform: translateY(0);
+            }
+            50%, 100% {
+                background: radial-gradient(circle at 20% 20%, #ff070785, #c3574f);
+                box-shadow: 10px 10px 15px 0 #fffd inset, 0 0 30px 0 red;
+                transform: translateY(200px); /* Adjust this value to control the bounce height */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="ball"></div>
+
+    <script>
+        // Toggle between animations on click
+        const ball = document.getElementById('ball');
+        ball.addEventListener('click', () => {
+            ball.classList.toggle('checked');
+        });
+    </script>
+</body>
+</html>

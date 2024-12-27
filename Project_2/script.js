@@ -21,6 +21,6 @@ window.addEventListener('scroll',() => {
 // script.js
 document.querySelectorAll('.card button').forEach(button => {
     button.addEventListener('click', () => {
-        alert('Explore more about this person!');
+        alert('This page is being redirected');
     });
 });

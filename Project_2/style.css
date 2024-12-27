@@ -190,10 +190,12 @@ footer {
     text-align: center;
 }
 
-.about-me {
-    padding: 0 15px;
-    text-align: justify;
+p.about-me {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5; 
 }
+
 
 button {
     background-color: #007bff;

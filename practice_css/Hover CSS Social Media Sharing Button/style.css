@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  display: flex;
+}
+
+ul:before {
+  position: absolute;
+  content: '\f1e0';
+  width: 65px;
+  font-family: fontAwesome;
+  height: 65px;
+  z-index: 3;
+  font-size: 33px;
+  cursor: pointer;
+  top: 120px;
+  left: 120px;
+  line-height: 65px;
+  text-align: center;
+  background: linear-gradient(#ff00ff, #8a2be2);
+  border-radius: 50%;
+  color: #fff;
+  transition: all 1.5s;
+}
+
+ul:hover:before {
+  transform: rotate(-180deg);
+}
+
+ul li {
+  position: absolute;
+  list-style: none;
+  top: 120px;
+  left: 110px;
+  transition: 1s;
+}
+
+ul li a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
+  margin: 0 12px;
+  font-size: 33px;
+}
+
+#whatsapp {
+  transform: rotate(0deg);
+}
+
+#linkedin {
+  transform: rotate(45deg);
+}
+
+#gmail {
+  transform: rotate(90deg);
+}
+
+#github {
+  transform: rotate(135deg);
+}
+
+#leetcode {
+  transform: rotate(180deg);
+}
+
+
+
+ul li:nth-child(1) a {
+  transition: all 0s 0.1s ease;
+  background: #25D366;
+}
+
+ul li:nth-child(2) a {
+  transition: all 0.1s 0.2s ease;
+  background: #0077B5;
+}
+
+ul li:nth-child(3) a {
+  transition: all 0.2s 0.3s ease;
+  background: #D44638; 
+}
+
+ul li:nth-child(4) a {
+  transition: all 0.3s 0.4s ease;
+  background: #333; 
+}
+
+ul li:nth-child(5) a {
+  transition: all 0.4s 0.5s ease;
+  background: #f89f1b; 
+}
+
+
+
+ul:hover li:nth-child(1) a {
+  transform: rotateZ(-0deg) translatex(100px);
+}
+
+ul:hover li:nth-child(2) a {
+  transform: rotateZ(-45deg) translatex(100px);
+}
+
+
+ul:hover li:nth-child(3) a {
+  transform: rotateZ(-90deg) translatex(100px);
+}
+
+ul:hover li:nth-child(4) a {
+  transform: rotateZ(-135deg) translatex(100px);
+}
+
+ul:hover li:nth-child(5) a {
+  transform: rotateZ(-180deg) translatex(100px);
+}
+
+
